@@ -1,6 +1,62 @@
 <script>
 export default {
     name: "AppHeader",
+    data() {
+        return {
+            navLinks: [
+                {
+                    label: "CHARACTERS",
+                    href: "",
+                    active: true,
+                },
+                {
+                    label: "COMICS",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "MOVIES",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "TV",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "GAMES",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "COLLECTIBLES",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "VIDEOS",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "FANS",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "NEWS",
+                    href: "",
+                    active: false,
+                },
+                {
+                    label: "SHOP",
+                    href: "",
+                    active: false,
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -14,16 +70,9 @@ export default {
 
                 <nav>
                     <ul class="flex-v-center">
-                        <li class="active"><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
-                        <li><a href="">test</a></li>
+                        <li v-for="link in navLinks" :class="link.active ? 'active' : ''">
+                            <a href="link.href">{{ link.label }}</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -63,6 +112,10 @@ li {
 
     /* DEBUG */
     border: 2px dashed brown;
+}
+
+a {
+    font-size: 0.8rem;
 }
 
 .active {
