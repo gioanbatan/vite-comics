@@ -73,6 +73,7 @@ export default {
 
 ul {
     width: 100%;
+    padding: 0 1rem;
 }
 
 a img {
@@ -81,7 +82,7 @@ a img {
 }
 
 a span {
-    display: inline-block;
+    display: block;
     padding-left: 1rem;
 }
 </style>

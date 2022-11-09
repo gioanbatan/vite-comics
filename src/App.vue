@@ -18,6 +18,7 @@ export default {
   <AppHeader />
   <AppMain />
   <AppBanner />
+  <AppFooter />
 </template>
 
 <style>
@@ -47,6 +48,8 @@ li {
   --col-white: #ffffff;
   --col-light-blue: #3b7df6;
   --col-dark-gray: #212121;
+  --col-gray: #323232;
+  --col-light-gray: #939393;
 }
 
 /* UTILITIES */

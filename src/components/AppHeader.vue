@@ -3,6 +3,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
+            activeNavElement: 0,
             navLinks: [
                 {
                     label: "CHARACTERS",
@@ -56,12 +57,18 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        changeActive(index) {
+            console.log("premut");
+            this.navLinks[this.activeNavElement].active = true;
+        }
     }
 }
 </script>
 
 <template>
-    <section class="header-section">
+    <header class="header-section">
         <div class="container">
             <div class="header-container flex-between flex-v-center">
                 <div class="logo-img">
@@ -70,14 +77,16 @@ export default {
 
                 <nav>
                     <ul class="flex-v-center">
-                        <li v-for="link in navLinks" :class="link.active ? 'active' : ''">
-                            <a href="link.href">{{ link.label }}</a>
+                        <li v-for="(link, index) in navLinks" :class="link.active ? 'active' : ''"
+                            @click="changeActive(index)">
+                            <!-- <a href="link.href">{{ link.label }}</a> -->
+                            <a>{{ link.label }}</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-    </section>
+    </header>
 </template>
 
 <style scoped>
@@ -109,9 +118,6 @@ li {
     align-items: center;
     height: 100%;
     padding: 1rem;
-
-    /* DEBUG */
-    border: 2px dashed brown;
 }
 
 a {
