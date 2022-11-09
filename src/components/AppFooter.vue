@@ -192,7 +192,7 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer-section {
     background-color: var(--col-dark-gray);
     background-image: url(../assets/img/footer-bg.jpg);

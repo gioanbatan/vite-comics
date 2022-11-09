@@ -57,7 +57,7 @@ export default {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .banner-section {
     width: 100%;
     background-color: var(--col-light-blue);

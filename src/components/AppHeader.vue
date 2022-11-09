@@ -77,7 +77,7 @@ export default {
 
                 <nav>
                     <ul class="flex-v-center">
-                        <li v-for="(link, index) in navLinks" :class="link.active ? 'active' : ''"
+                        <li v-for="(link, index) in navLinks" :class="{ 'active': link.active }"
                             @click="changeActive(index)">
                             <!-- <a href="link.href">{{ link.label }}</a> -->
                             <a>{{ link.label }}</a>
@@ -89,7 +89,7 @@ export default {
     </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .header-section {
     width: 100%;
     margin: 0 auto;
