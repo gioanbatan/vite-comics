@@ -204,7 +204,7 @@ export default {
     /* width: 100%; */
 
     /* DEBUG */
-    height: 500px;
+    height: 550px;
 }
 
 .links-lists {
