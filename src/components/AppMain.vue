@@ -1,4 +1,5 @@
 <script>
+import ComicsCard from "../components/ComicsCard.vue";
 export default {
     name: "AppMain",
     data() {
@@ -93,19 +94,21 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="card" v-for="(comic, index) in comicsDC" :key="index">
-                        <div class="card-image">
+                    <ComicsCard class="card" v-for="(comic, index) in comicsDC" :key="index" :comicSeries="comic.series"
+                        :comicImg="comic.thumb" />
+                    <!-- <div class="card" v-for="(comic, index) in comicsDC" :key="index"></div> -->
+                    <!-- <div class="card-image">
                             <img :src="comic.thumb" :alt.uppercase="comic.series">
                         </div>
                         <span class="card-text">
                             {{ comic.series }}
-                        </span>
-                    </div>
+                        </span> -->
+
                 </div>
             </div>
-
-            <button class="btn-std">load more</button>
         </div>
+
+        <button class="btn-std">load more</button>
     </section>
 </template>
 
@@ -144,28 +147,28 @@ export default {
     flex-wrap: wrap;
 }
 
-.card {
-    width: calc(100% / 6 - 1rem);
-    margin: 0.5rem;
+// .card {
+//     width: calc(100% / 6 - 1rem);
+//     margin: 0.5rem;
 
-    .card-image {
-        width: calc(80vw / 6 - 1rem);
-        height: calc(80vw / 6 - 1rem);
-        padding-bottom: 0.5rem;
+//     .card-image {
+//         width: calc(80vw / 6 - 1rem);
+//         height: calc(80vw / 6 - 1rem);
+//         padding-bottom: 0.5rem;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-        }
-    }
+//         img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//             object-position: top;
+//         }
+//     }
 
-    .card-text {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-    }
-}
+//     .card-text {
+//         font-size: 0.8rem;
+//         text-transform: uppercase;
+//     }
+// }
 
 .btn-std {
     display: block;
