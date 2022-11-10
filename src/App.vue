@@ -3,7 +3,6 @@ import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppBanner from "./components/AppBanner.vue";
 import AppFooter from "./components/AppFooter.vue";
-import ComicsCard from "./components/ComicsCard.vue";
 
 export default {
   components: {
@@ -11,7 +10,6 @@ export default {
     AppMain,
     AppBanner,
     AppFooter,
-    ComicsCard
   }
 }
 </script>
@@ -24,6 +22,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./style/general.scss" as *;
-@use "./style/partials/variables" as *;
+@use "./style/general.scss" as *
 </style>

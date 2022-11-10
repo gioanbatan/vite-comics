@@ -1,7 +1,10 @@
 <script>
-import ComicsCard from "../components/ComicsCard.vue";
+import ComicsCard from '../components/ComicsCard.vue';
 export default {
     name: "AppMain",
+    components: {
+        ComicsCard
+    },
     data() {
         return {
             comicsDC: [
@@ -94,16 +97,8 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <ComicsCard class="card" v-for="(comic, index) in comicsDC" :key="index" :comicSeries="comic.series"
+                    <ComicsCard v-for="(comic, index) in comicsDC" :key="index" :comicSeries="comic.series"
                         :comicImg="comic.thumb" />
-                    <!-- <div class="card" v-for="(comic, index) in comicsDC" :key="index"></div> -->
-                    <!-- <div class="card-image">
-                            <img :src="comic.thumb" :alt.uppercase="comic.series">
-                        </div>
-                        <span class="card-text">
-                            {{ comic.series }}
-                        </span> -->
-
                 </div>
             </div>
         </div>
@@ -147,28 +142,7 @@ export default {
     flex-wrap: wrap;
 }
 
-// .card {
-//     width: calc(100% / 6 - 1rem);
-//     margin: 0.5rem;
 
-//     .card-image {
-//         width: calc(80vw / 6 - 1rem);
-//         height: calc(80vw / 6 - 1rem);
-//         padding-bottom: 0.5rem;
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             object-position: top;
-//         }
-//     }
-
-//     .card-text {
-//         font-size: 0.8rem;
-//         text-transform: uppercase;
-//     }
-// }
 
 .btn-std {
     display: block;
